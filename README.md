@@ -1,53 +1,66 @@
-# Health Facility Data Management System (HFDMS)
+Health Facility Data Management System (HFDMS)
+Project Description
+The Health Facility Data Management System (HFDMS) is a web-based application designed to manage data for health facilities, health workers, and patients. It includes features for user authentication and role-based dashboards, allowing admins, super admins, and health workers to access and manage relevant data. This system is built using React for the frontend and C# with .NET for the backend, and uses SQL Server as the database.
 
-## Overview
+Frontend Setup
+Clone the Repository
 
-The Health Facility Data Management System (HFDMS) is an integrated solution designed to manage health facilities, health workers, and patient data. The system features a React frontend, a .NET 5 backend, and SQL Server for data management. It provides role-based dashboards for Admin, Super Admin, and Worker users.
 
-## Installation
-
-### Frontend Setup
-
-1. **Clone the Repository**
-   ```bash
-   git clone <repository-url>
-   cd hfdms-frontend
+git clone <repository-url>
+cd hfdms-frontend
 Install Dependencies
 
+
 npm install
-Start the Development Server
+Run the Development Server
+
 
 npm start
-The application will run at http://localhost:3000.
+The frontend will be available at http://localhost:3000.
 
+Troubleshooting:
+
+Ensure react-router-dom is installed and imported correctly.
+For any issues, check the console for errors and ensure all components are correctly referenced.
 Backend Setup
 Clone the Repository
 
+
 git clone <repository-url>
 cd hfdms-backend
-Install .NET 5 SDK Follow the official installation guide.
+Install Dependencies
 
-Restore and Run the Application
 
 dotnet restore
+Build the Application
+
+
+dotnet build
+Run the Application
+
+
 dotnet run
-The API will be available at http://localhost:5000.
+The backend will be available at http://localhost:5000.
 
+API Endpoints:
+
+/api/auth/login - Handles user login.
+/api/users - Manages user data.
+/api/healthfacilities - Manages health facilities data.
 Database Setup
-Install SQL Server Follow the SQL Server installation guide.
+Install SQL Server:
 
-Create a Database Use SQL Server Management Studio to create a database named HFDMS.
+Download and install SQL Server from Microsoft's website.
+Follow the installation instructions to set up the server.
+Create Database and Schema:
 
-Run Database Schema Execute the provided SQL scripts to set up the database schema.
+Open SQL Server Management Studio (SSMS).
+Connect to your SQL Server instance.
+Open a new query window and paste the SQL script in the Database folder:
 
-Configure Connection Strings Update appsettings.json in the backend with your SQL Server connection details.
 
-Usage
-Admin Dashboard: Manage health facilities and workers.
-Super Admin Dashboard: Manage facilities, workers, and users.
-Worker Dashboard: View profile and tasks.
-License
-This project is licensed under the MIT License.
-
-Contact
-For issues or inquiries, contact elishaaywak@gmail.com / eayuak@yahoo.com
+Execute the SQL script to create tables and populate them with sample data.
+Additional Notes
+Ensure all environment variables and configurations are properly set up for both frontend and backend applications.
+Update your .env files with the correct database connection strings and API URLs.
+For any issues or questions, please refer to the project documentation or contact the development team.
